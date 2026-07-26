@@ -180,7 +180,18 @@
            Note that this work builds on decades of academic research across interactive theorem proving, formal specification, separation logic and
             its automation, and programming language semantics.</p>
 
-        <h5><a href="https://qis.rwth-aachen.de/people/unruh/">Dominique Unruh</a>, RWTH Aachen and University of Tartu</h5>
+        <h5><a href="https://qis.rwth-aachen.de/people/unruh/">Dominique Unruh</a>, <i>RWTH Aachen and University of Tartu</i>: Developing a quantum crypto theorem prover from scratch
+                    </h5>
+
+        <p>We describe our experience developing qrhl-tool, a theorem prover for verifying quantum cryptographic protocols, 
+            both in the post-quantum and the full quantum setting.  The tool is built around quantum relational Hoare logic (qRHL),
+             a relational program logic for reasoning about pairs of quantum programs in the style of game-based cryptographic proofs. 
+              We discuss the design choices underlying the tool: in particular, a hybrid architecture that delegates ambient-logic reasoning
+               to Isabelle/HOL while qrhl-tool itself handles qRHL judgments and the program language; an advanced memoization mechanism 
+               (hashed computations) that enables efficient incremental proof checking; and a deliberate path towards a foundational implementation. 
+                We walk through a small worked example (the hardness of inverting f∘︎f given a one-way permutation f) to illustrate how these pieces fit 
+                together in practice.  Along the way we highlight what we got right, what we got wrong, and which limitations (procedure parameters, 
+                local variables, runtime reasoning) we would approach differently if starting over today.</p>
 
                 </div>
             </div>
