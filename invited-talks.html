@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang=" en ">
 
 <head>
   <meta charset="utf-8">
@@ -13,16 +13,22 @@
         crossorigin="anonymous">
   <link rel="stylesheet" href="./assets/hotweb.css ">
   <link rel="stylesheet" href="./assets/font-awesome.min.css">
-  <link rel="canonical" href="/index.html">
+  <link rel="canonical" href="/">
 
-<style>
-body{
-background-color: rgba(0,0,0,0);
-/*
-background-image: url("./assets/images/emacs.png");
-*/
-}
-</style>
+  
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-99357652-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+  
+
+  
 
 </head>
 
@@ -31,7 +37,7 @@ background-image: url("./assets/images/emacs.png");
 
     <div class="container">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 offset-xl-1 col-xl-10 offset-xl-1">
-    <header class="site-header">
+        <header class="site-header">
         <div class="row">
 
           <!--conference info-->
@@ -97,13 +103,12 @@ background-image: url("./assets/images/emacs.png");
               <div class="collapse navbar-collapse " id="navbarToggler">
                 <a class="navbar-brand" href="#"> </a>
                 <ul class="navbar-nav mx-auto text-center">
-                  <li class="nav-item active">
+                  <li class="nav-item ">
                     <a class="nav-link m-1" href="./index.html">
                       <strong>Home</strong>
-                      <span class="sr-only">(current)</span>
                     </a>
                   </li>
-                  <li class="nav-item">
+                  <li class="nav-item ">
                     <a class="nav-link m-1" href="./organization.html">
                       <strong>Organization</strong>
                     </a>
@@ -123,14 +128,15 @@ background-image: url("./assets/images/emacs.png");
                       <strong>Venue</strong>
                     </a>
                   </li>
-                  <li class="nav-item ">
+                  <li class="nav-item active">
                     <a class="nav-link m-1" href="./registration.html">
                       <strong>Registration</strong>
                     </a>
                   </li>
-                  <li class="nav-item ">
+                  <li class="nav-item active">
                     <a class="nav-link m-1" href="./invited-talks.html">
                       <strong>Invited Talks</strong>
+                      <span class="sr-only">(current)</span>
                     </a>
                   </li>
                 </ul>
@@ -140,155 +146,53 @@ background-image: url("./assets/images/emacs.png");
         </div>
       </header>
  
-        <div class="row mt-xs-0 mt-sm-0 mt-md-1 mt-lg-2 mt-xl-2 mb-xs-2 mb-sm-2">
+    <div class="row mt-xs-0 mt-sm-0 mt-md-1 mt-lg-2 mt-xl-2 mb-xs-2 mb-sm-2">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-10 offset-xl-1">
+      <div class="container">
+    <div class="row mt-xs-0 mt-sm-0 mt-md-1 mt-lg-2 mt-xl-3 mb-xs-2 mb-sm-2">
+                <div class="col">
+        <h4>Invited Talks</h4>
+        <h5><b><a href="https://dominicpm.github.io/">Dominic Mulligan</a></b>, <i>Amazon Web Services</i>: Nitro Isolation Engine: 
+            Formally Verifying a Production Hypervisor</h5>
+
+        <p>Cloud computing relies on hypervisors to enforce isolation between co-tenanted virtual machines. 
+          Hypervisors are therefore critical security infrastructure, and assurance of their correctness is paramount.
+           Traditional engineering techniques—code review, testing, fuzzing—provide strong assurance but cannot exhaustively verify 
+           that isolation holds across all possible execution paths. Formal verification extends and complements these approaches by
+            establishing mathematical guarantees about system behaviour.</p>
+
+        <p>This talk presents our experience applying interactive theorem proving to verify a production hypervisor component:
+         the Nitro Isolation Engine. This is a trusted, minimalist computing base written in Rust, enforcing isolation between virtual 
+         machines on AWS Graviton5 EC2 instances. Designed for verification from inception, we have specified the intended behaviour of 
+         this component and verified correctness in the Isabelle/HOL interactive theorem prover, producing approximately 350,000 lines of 
+         machine-checked models and proofs, and establishing three key classes of property:</p>
+
+        <p>1) Functional correctness: The system behaves as specified for all operations including virtual machine creation,
+         memory mapping, and abort handling. Our total verification approach additionally establishes memory-safety, termination, 
+         and absence of runtime errors.</p>
+        <p>2) Confidentiality: A noninterference-style property demonstrates that guest virtual machine state remains hidden from an expansive definition of observer monitoring system actions, formalised as indistinguishability preservation up to permitted declassification flows.
+        </p>
+        <p>3) Integrity: Guest virtual machine private state is unaffected by operations on distinct virtual machines.</p>
+
+        <p></p>Currently, our proof coverage extends to verification of the core virtual machine-management hypercalls, guest power management, various utility hypercalls, and a subset of data, instruction, and asynchronous abort handling, and will continue to expand to cover more functionality including PCI device management and virtual GIC (Generic Interrupt Controller) handling.</p>
+
+        <p>The talk will discuss the verification approach, key proof techniques, and challenges in applying formal methods to production systems.
+           Note that this work builds on decades of academic research across interactive theorem proving, formal specification, separation logic and
+            its automation, and programming language semantics.</p>
+
+        <h4><a href="https://qis.rwth-aachen.de/people/unruh/">Dominique Unruh</a>, RWTH Aachen and University of Tartu</h4>
+
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+
+ 
+        <!--<footer style="padding-top: 1.5rem; border-top: 0.05rem solid #e5e5e5">-->
+
         <div class="row">
-    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 text-justify conference-text">
-
-            <h4>WELCOME TO ITP 2026!</h4>
-<!--
-            <p><a href="https://drops.dagstuhl.de/opus/portals/lipics/index.php?semnr=16248">Proceedings</a></p>
--->
-            <p>The International Conference on Interactive Theorem Proving (ITP 2026) will take place on 26-29 July, 2026 in Lisbon, Portugal, as part of <a href="https://www.floc26.org/">FLoC'26</a>.
-            ITP 2026 is part of the <a href="https://itp-conference.github.io/">ITP conference series</a> whose history goes back to 1988.</p>
-
-            <p>
-ITP welcomes submissions describing original research on all aspects of interactive theorem proving and its applications. Suggested topics include, but are not limited to, the following:</p>
-
-<ul>
-<li>formalizations of computational models</li>
-<li>improvements in interactive theorem prover technology</li>
-<li>formalizations of mathematics</li>
-<li>integration with automated provers and other symbolic tools</li>
-<li>verification of security algorithms</li>
-<li>industrial applications of interactive theorem provers</li>
-<li>formal specification and verification of hardware and software</li>
-<li>user interfaces for interactive theorem provers</li>
-<li>use of theorem provers in education</li>
-<li>concise and elegant worked examples of formalizations (proof pearls)</li>
-</ul>
-
-<!--
-<p><video width="320" height="240" controls><source src="assets/videos/ITP22-CFP1-low.mp4" type="video/mp4">Your browser does not support the video</video></p>
--->
-
-<h5>Contact</h5>
-<p class="text-left"> 
-    If you have any problems or questions, please contact us via e-mail at: 
-    <a href="mailto:itp2026lisbon@gmail.com">
-        <i class="fa fa-envelope-o fa-fw" aria-hidden="true"></i> 
-        itp2026lisbon@gmail.com
-    </a>
-</p>
-
-    </div>
-    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-      <!--<h4>Workshops</h4>
-        <p>Rocqshop</p> 
-        <p><a href="https://sketis.net/isabelle/isabelle-workshop-2026">Isabelle Workshop</a></p>
-        <p><a href="https://leanprover-community.github.io/floc-2026-lean-workshop/">Lean Workshop</a></p>-->
-
-            <!--######### important dates ##########-->
-            <div class="card">
-    <div class="card-header text-white bg-inverse">
-        <i class="fa fa-calendar-o mr-3" aria-hidden="true"></i><strong>Important Dates</strong>
-    </div>
-    <div class="card-block bg-faded">
-        <ul class="list-group list-group-flush">
-            
-                
-                    
-                        <li class="list-group-item bg-faded text-muted">
-                            
-                                <p><strong>Abstract deadline:</strong> 
-                                
-                                 February 12, 2026 (AOE)
-                                </p>
-                            
-                        </li>
-                
-                    
-                        <li class="list-group-item bg-faded text-muted">
-                            
-                                <p><strong>Paper submission deadline:</strong> 
-                                
-                                February 19, 2026 (AOE)
-                                </p>
-                            
-                        </li>
-                
-                    
-                        <li class="list-group-item bg-faded text-muted">
-                            
-                                <p><strong>Author notification:</strong> 
-                                
-                                April 26, 2026
-                                </p>
-                            
-                        </li>
-                
-                    
-                        <li class="list-group-item bg-faded text-muted">
-                            
-                                <p><strong>Camera-ready copy due:</strong> 
-                                
-                                May 24, 2026
-                                </p>
-                            
-                        </li>
-                
-                    
-                        <li class="list-group-item bg-faded text-muted">
-                            
-                                <p><strong>Conference:</strong> 
-                                
-                                26 - 29 July, 2026.
-                                </p>
-                            
-                        </li>
-                
-            
-        </ul>
-    </div>
-</div>
-            <!--####################################-->
-            <!--######### news #####################-->
-            <div class="card">
-    <div class="card-header text-white bg-inverse">
-        <i class="fa fa-newspaper-o mr-3" aria-hidden="true"></i><strong>News & Information</strong>
-    </div>
-    <div class="card-block bg-faded">
-        <ul class="list-group list-group-flush">
-                                <p><strong>Invited Speakers:</strong></p> 
-                                
-                                <ul>
-                                    <li><strong><a href="https://dominicpm.github.io/">Dominic Mulligan</a></strong>, Amazon Web Services</li>
-                                    <li><strong><a href="https://qis.rwth-aachen.de/people/unruh/">Dominique Unruh</a></strong>, RWTH Aachen and University of Tartu</li>
-                                </ul>        
-                                
-                                <p><strong>Workshops:</strong></p> 
-                                <ul>
-                                  <li><strong><a href="https://coq-workshop.gitlab.io/2026/">Rocqshop</a></strong>, 25 July</li>
-                                  <li><strong><a href="https://sketis.net/isabelle/isabelle-workshop-2026">Isabelle Workshop</a></strong>, 24 - 25 July</li>
-                                  <li><strong><a href="https://leanprover-community.github.io/floc-2026-lean-workshop/">Lean Workshop</a></strong>, 25 July</li>
-                                </ul>
-                                
-                                <p><strong>News:</strong></p> 
-                                <p>The proceedings of the conference are now avilable <i><strong><a href="https://www.dagstuhl.de/dagpub/978-3-95977-436-9" target="_blank">as volume 382 of LIPIcs</a></strong></i>!</p>
-                                <p>The list of accepted papers can now be found <a href="./program.html"><i>here</i>.</p>
-                                
-            
-        </ul>
-    </div>
-</div>
-    </div>
-</div>
-
-
-
-
-    </div>
-</div>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-10 offset-xl-1">
             <footer>
                 <p class="text-muted small pull-right">ITP 2026</p>
                 <div  class="pull-left">
@@ -299,19 +203,17 @@ ITP welcomes submissions describing original research on all aspects of interact
                 </div>
             </footer>
             </div>
+        </div>
 
         </div>
     </div>
-<!--
--->
+
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
         crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
         crossorigin="anonymous"></script>
-        </div>
-    </div>
 </body>
 
 </html>
